@@ -8,11 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Sort;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,6 +35,10 @@ public class CustomerController {
         return customerService.getAllCustomers(page, size, Sort.by(sort));
     }
 
+    @PostMapping("/add")
+    public Mono<Customer> addCustomer(@RequestBody Customer customer) {
+        return customerService.addCustomer(customer);
+    }
 
     @GetMapping("/gross-sales-services")
     public Flux<GrossSalesService> getGrossSalesServices(
