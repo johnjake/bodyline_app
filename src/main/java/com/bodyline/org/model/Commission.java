@@ -1,13 +1,11 @@
 package com.bodyline.org.model;
 
-import io.r2dbc.spi.Parameter;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
-
 import java.math.BigDecimal;
 
 @Data
