@@ -3,6 +3,7 @@ package com.bodyline.org.model;
 import lombok.Data;
 
 @Data
+
 public class GrossSalesService {
     private String invoiceId;
     private String timeIn;
