@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
-
 import java.sql.Date;
 import java.time.LocalDateTime;
 
@@ -40,5 +39,4 @@ public class CounterDB {
 
     @Column("Counter_Date")
     private Date counterDate;
-
 }
