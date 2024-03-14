@@ -30,7 +30,7 @@ public class CustomerController {
 
     @GetMapping("/customers")
     public Flux<Customer> getCustomers(@RequestParam(value = "page", defaultValue = "0") int page,
-                                       @RequestParam(value = "size", defaultValue = "10") int size,
+                                       @RequestParam(value = "size", defaultValue = "0") int size,
                                        @RequestParam(value = "sort", defaultValue = "Ctrl_ID") String sort) {
         return customerService.getAllCustomers(page, size, Sort.by(sort));
     }
