@@ -7,14 +7,11 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 import java.util.Date;
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table("Advantage_Card")
 public class AdvantageCard {
-
 
     @Id
     @Column("Advantage_CtrlID")
